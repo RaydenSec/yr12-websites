@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Rogue Metro</title>
+    <link rel="icon" type="image/png" href="../images/favicon.png">
+    <link rel="stylesheet" href="../css/gallery.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">  <!-- Image API -->
+  </head>
+  <body>
+
+    <div class="container">
+
+      <!-- Navbar -->
+      <nav class="navContainer">
+        <a href="home.html" class="navItem navPosition">Home<a>
+        <a href="aboutus.html" class="navItem navPosition">About Us<a>
+        <div class="logoContainer">
+          <img class="logo navPosition" src="../images/logo.png" alt="Logo">
+        </div>
+        <a href="gallery.html" class="navItem navPosition">Game Library<a>
+        <a class="navItem navPosition" onclick="checkoutPopout();">Game Basket<a>
+      </nav>
+      <!-- End of Navbar -->
+
+      <!-- Header -->
+      <header class="spotlightContainer">
+
+          <div class="spotlightGame">
+            <!-- Watch Trailer -->
+            <button type="button" class="spotlightButton spotlightRent" onclick="preview('cover9');">Rent Now</button>
+            <button type="button" class="spotlightButton spotlightTrailer" onclick="playCoverTrailer();">▶ &nbspWatch Trailer</button>
+            <!-- End of Watch Trailer -->
+          </div>
+          <div class="spotlightBottomFade"></div>
+
+      </header>
+      <!-- End of Header -->
+
+      <!-- Filter -->
+      <div class="filterContainer">
+        <form class="genreFilter" name="genre">
+          <select name="genreSelect" onchange="selectGenre(this.selectedIndex);">
+            <option>Filter By Genre</option>
+            <option>Adventure</option>
+            <option>Horror</option>
+            <option>Indie</option>
+          </select>
+        </form>
+
+        <form class="filterItems" action="index.html">
+          <input type="text" class="nameFilterBox" name="nameFilter" placeholder="Name" onkeyup="filterByName();">
+        </form>
+
+      </div>
+      <!-- End of Filter -->
+
+      <!-- Game Gallery -->
+      <main id="main">
+
+      </main>
+      <!-- End of Game Gallery -->
+
+      <!-- Play Trailer Container -->
+      <div class="trailerContainer">
+        <video src="../images/bf2042-trailer.mp4" controls="true" autoplay></video>
+        <img src="../images/close.png" class="closeVideo" onclick="playCoverTrailer();">
+      </div>
+      <!-- End of Play Trailer Container -->
+
+      <!-- Selected Game Container -->
+      <div class="selectedGameContainer">
+        <div class="selectContainer">
+          <div class="split left">
+          </div>
+          <div class="split right">
+            <img src="../images/close.png" class="closeSelectedContainer" onclick="closeGameContainer();">
+            <h1 class="selectName"></h1>
+            <p class="selectPrice"></p>
+
+            <div class="purchaseQuantity">
+              <label for="gameQty">Qty:</label>
+              <input class="inputStyle" id="gameQty" type="number" min="1" max="5" value="1">
+              <br><br>
+              <label for="numDays">Rental Period (# weeks):</label>
+              <input class="inputStyle" id="numDays" type="number" min="1" max="365" value="1"> <!-- max 365 days -->
+              <br>
+              <button type="button" onclick="resetQty();">Reset</button>
+            </div>
+
+            <a href="#" class="btn" onclick="addToCart();">ADD TO CART</a>
+          </div>
+        </div>
+
+      </div>
+      <!-- End of Selected Game Container -->
+
+      <!-- Checkout Container -->
+
+      <div class="cartContainerBackground">
+        <div class="cartContainer">
+          <div class="leftSplit"></div>
+          <div class="rightSplit">
+            <img src="../images/close.png" class="closeSelectedContainer" onclick="closeCartContainer();">
+            <h2>Checkout <i class="fas fa-shopping-cart"></i></h2>
+
+            <div class="cartList"></div>
+
+            <div class="checkoutSelect">
+              <form name="shipping">
+                <label>Select Shipping: </label>
+                <select name="shippingSelect" onchange="selectShipping(this.selectedIndex);">
+                  <option>Standard ($10)</option>
+                  <option>3-day ($30)</option>
+                  <option>Overnight ($60)</option>
+                </select>
+              </form>
+
+              <h3 class="checkoutTotal"></h3>
+
+              <div class="buttonGroup">
+                <button class="resetCart" type="button" onclick="reset();" class="reset">Reset</button><br>
+                <button class="buyNow">Buy Now <i class="fas fa-shopping-cart"></i></button>
+              </div>
+
+            </div>
+
+          </div>
+        </div>
+      </div>
+
+      <!-- End of Checkout Container -->
+
+      <!-- Footer -->
+      <div class="space"></div>
+
+      <footer class="footerContainer">
+        <div class="footerContent">
+
+          <div class="column1">
+            <h2>Social Media</h2>
+            <ul>
+              <li><a href="https://facebook.com"><i class="fab fa-facebook-square"></i> &nbspFacebook</a></li>
+              <li><a href="https://instagram.com"><i class="fab fa-instagram-square"></i> &nbspInstagram</a></li>
+              <li><a href="https://twitter.com"><i class="fab fa-twitter"></i> &nbspTwitter</a></li>
+              <li><a href="https://youtube.com"><i class="fab fa-youtube"></i> &nbspYoutube</a></li>
+            </ul>
+          </div>
+
+          <div class="column2">
+            <h2>Explore</h2>
+            <ul>
+              <li><a href="home.html">Home</a></li> <!--Insert href!!!!!!!!!!!!!!!-->
+              <li><a href="aboutus.html">About Us</a></li>
+              <li><a href="gallery.html">Game Library</a></li>
+              <li><a onclick="checkoutPopout();">Game Basket</a></li>
+            </ul>
+          </div>
+
+          <div class="column3">
+            <form class="contactForm">
+              <input type="text" class="contactInput" placeholder="Name">
+              <input type="text" class="contactInput" placeholder="Subject">
+              <textarea class="form-input" placeholder="Message..."></textarea>
+              <input class="formSubmitButton" type="submit" value="Submit" onclick="sendEmail();">
+            </form>
+          </div>
+
+        </div>
+      </footer>
+      <!-- End of Footer -->
+
+      <!-- Background Container for trailer and selected game container -->
+      <div class="backgroundContainer"></div>
+      <!-- End of Background Game Container -->
+
+    </div>
+
+    <script type="text/javascript" src="../js/gallery.js"></script>
+  </body>
+</html>

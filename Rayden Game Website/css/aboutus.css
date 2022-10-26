@@ -1,0 +1,146 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat');
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #f4f4f4;
+  font-family: 'Montserrat', sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  overflow: hidden;
+  margin: 0;
+  padding: 10px;
+}
+
+/* Navbar Container */
+
+.navContainer {
+
+  opacity: 90%;
+  background-color: #050301;
+  height: 80px;
+  box-shadow: 0.1rem 0.1rem 0.5rem #000;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  z-index: 70;
+  transition: 1s;  /* for opacity js */
+  font-size: 20px;
+}
+
+.navItem {
+  height: 100%;
+  float: left;
+  list-style-type: none;
+  display: block;
+  color: white;
+  text-align: center;
+  width: 20%;
+  text-decoration: none;
+  font-weight: 400;
+}
+
+.navItem:hover {
+  background-color: #222222;
+}
+
+.navPosition {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-items: center;
+}
+
+.logo {
+  height: 100%;
+  margin: auto;
+}
+
+.logoContainer {
+  height: 100%;
+  float: left;
+  list-style-type: none;
+  display: block;
+  color: white;
+  text-align: center;
+  width: 20%;
+  text-decoration: none;
+  font-weight: 400;
+  background-color: #000;
+}
+
+/* End of Navbar Container */
+
+/* About Us */
+
+.background {
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  left: 0;
+  top: 0;
+  background: url("../images/aboutUsImages/about_us_bg.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.reviewsContainer {
+  width: 900px;
+  position: relative;
+  background-color: #222222;
+  opacity: 90%;
+  color: #fff;
+  border-radius: 30px;
+  padding: 50px 80px;
+}
+
+.content {
+  line-height: 28px;
+  text-align: justify;
+}
+
+.customer {
+  display: flex;
+  justify-content: center;
+}
+
+.customerImg {
+  border-radius: 50%;
+  height: 75px;
+  width: 75px;
+  object-fit: cover;
+}
+
+.customerDetails {
+  margin-left: 10px;
+}
+
+.customerName {
+  margin: 0;
+  font-size: 20px;
+  padding-top: 25px;
+  padding-left: 10px;
+}
+
+.loadingBar {
+  background-color: #a9a9a9;
+  height: 8px;
+  width: 100%;
+  animation: load 10s linear infinite;
+  transform-origin: left;
+}
+
+@keyframes load {  /* Infinitely increase width scale of loading bar */
+  0% {
+    transform: scaleX(0);
+  }
+  100% {
+    transform: scaleX(1);
+  }
+}

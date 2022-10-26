@@ -1,0 +1,687 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap');
+
+/* Global Styles */
+
+* {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+  text-decoration: none;
+  box-sizing: border-box;
+  outline: none;
+}
+
+body {
+  margin: 0;
+  background-image: linear-gradient(rgb(22, 22, 21), #000);
+  font-family: 'Roboto', sans-serif;
+}
+
+section {
+  padding: 1rem;
+  display: flex;
+  justify-content: flex-end;
+  background-color: grey;
+}
+
+/* End of Global Styles */
+
+/* Navbar Container */
+
+.navContainer {
+  opacity: 90%;
+  background-color: #050301;
+  height: 80px;
+  box-shadow: 0.1rem 0.1rem 0.5rem #000;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  z-index: 70;
+  transition: 1s;  /* for opacity js */
+  font-size: 20px;
+}
+
+.navItem {
+  height: 100%;
+  float: left;
+  list-style-type: none;
+  display: block;
+  color: white;
+  text-align: center;
+  width: 20%;
+  text-decoration: none;
+  font-weight: 400;
+  cursor: pointer;
+}
+
+.navItem:hover {
+  background-color: #222222;
+}
+
+.navPosition {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-items: center;
+}
+
+.logo {
+  height: 100%;
+  margin: auto;
+}
+
+.logoContainer {
+  height: 100%;
+  float: left;
+  list-style-type: none;
+  display: block;
+  color: white;
+  text-align: center;
+  width: 20%;
+  text-decoration: none;
+  font-weight: 400;
+  background-color: #000;
+}
+
+/* End of Navbar Container */
+
+/* Header */
+
+.spotlightContainer {
+  margin-top: 80px; /* for navbar */
+  color: white;
+  height: 660px;
+  height: 660px;
+  background-image: url('../images/bf2042-cover.png');
+  object-fit: contain;
+  background-size: cover;
+  background-position: center center;
+  z-index: 10;
+
+  position: relative;  /* parent container relative so button absolute can be centered */
+}
+
+/* Change dimensions*/
+
+.spotlightGame {
+  margin-left: 30px;
+  padding-top: 140px;
+  height: 400px;
+}
+
+.spotlightButton {
+  color: #fff;
+  cursor: pointer;
+  outline: none;
+  border: none;
+  font-weight: 500;
+  border-radius: 3px;
+  background-color: rgba(51, 51, 51, 0.75);
+}
+
+.spotlightButton:hover {
+  color: #000;
+  background-color: #e6e6e6;
+  transition: all 0.5s;
+}
+
+.spotlightRent {
+  position: absolute;  /* Read spotlight container relative comment */
+  right: 46%;
+  bottom: 25%;
+
+  padding-left: 2rem;
+  padding-right: 2rem;
+  padding-top: 0.7rem;
+  padding-bottom: 0.7rem;
+}
+
+.spotlightTrailer {
+  position: absolute;  /* Read spotlight container relative comment */
+  right: 5%;
+  bottom: 10%;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+}
+
+.spotlightBottomFade {
+  margin-top: 145px;
+  height: 7.4rem;
+  background-image: linear-gradient(180deg, transparent, rgba(37, 37, 37, 0.61), #111);
+}
+
+/* End of Header */
+
+.game {  /* in JS */
+  width: 180px;
+  height: 250px;
+  margin: 0.5rem;
+  border-radius: 5px;
+  background-color: #373b69;
+  box-shadow: 0 4px 5px rgba(0, 0, 0, 0.2);
+  position: relative;
+  overflow: hidden;
+}
+
+.gameCover {
+  height: 100%;
+  width: 100%;  /*try full art with cover style*/
+  overflow: hidden;
+}
+
+.gameCover:hover {
+  /* box-shadow: 3rem 3rem 4rem #ddd, -3rem -3rem 4rem #eee; */
+  opacity: 0.8;
+  cursor: pointer;
+  /* transform image in cool side ways and zoom in */
+}
+
+/* Edit in html */
+
+main {
+  margin-top: 50px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+/* Filter Section */
+.filterContainer {
+  margin-top: 40px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.genreFilter {
+  margin-right: 2.5px;
+  width: 105px;
+}
+
+.filterItems {
+  margin-left: 2.5px;
+}
+/* End of Filter Section */
+
+
+/* Footer */
+
+.space {
+  height: 30px;
+  background-color: #000;
+}
+
+.footerContainer {
+  color: #646464;
+  background-color: #000057;
+  height: 250px;
+  box-shadow: 100px 50px 100px #aaa;
+  padding: 10px;
+}
+
+.footerContent {
+  height: 230px;
+  background-color: #000057;
+  position: relative;
+  padding: 10px;
+
+  display: flex;
+	flex-wrap: wrap;
+}
+
+.fab {
+  font-size: 20px;
+}
+
+.column1 ul li {
+  margin-bottom: 10px;
+}
+
+.column1 ul li a {
+  color: #0000FF;
+  transition: all 0.3s;
+}
+
+.column1 ul li a:hover {
+  color: #e6e6e6;
+  padding-left: 4px;
+}
+
+.scroll-btn:hover {
+  color: #e6e6e6;
+}
+
+.column1, .column2 {
+  width: 25%;
+  padding: 0 15px;
+}
+
+h2 {
+  margin-bottom: 20px;
+}
+
+.column2 ul li {
+  margin-bottom: 5px;
+}
+
+.column2 ul li a {
+  color: #646464;
+  transition: all 0.3s;
+  cursor: pointer;
+}
+
+.column2 ul li a:hover {  /* discuss hierarchy */
+  color: #e6e6e6;
+	padding-left: 4px;
+}
+
+.column3 {
+  margin-top: -5px;
+  width: 50%;
+}
+
+.contactForm {
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.8)), url("../images/footerImg.png") center;
+  background-size: cover;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 3px 3px 4px #000;
+  transition: all 0.5s;
+}
+
+.contactForm:hover {
+  transform: translateX(3px) translateY(-3px);
+  box-shadow: 5px 5px 7px #000;
+}
+
+.contactInput, .form-input {
+  background-color: #000;
+  margin: 5px;
+  padding: 5px;
+  font-size: 13px;
+  letter-spacing: 1px;
+  border-radius: 5px;
+  color: #fff;
+}
+
+.form-input {
+  max-height: 150px;
+  min-height: 60px;
+  max-width: 100%;
+  min-width: 70%;
+}
+
+.formSubmitButton {
+  width: 20%;
+  margin: 5px auto 0 auto;
+  padding: 5px;
+  color: #fff;
+  cursor: pointer;
+  outline: none;
+  border: none;
+  font-size: 13px;
+  border-radius: 3px;
+  background-color: rgba(51, 51, 51, 0.75);
+}
+
+.formSubmitButton:hover {
+  color: #000;
+  background-color: #e6e6e6;
+  transition: all 0.5s;
+}
+
+/* End of Footer */
+
+/* Background Container */
+.backgroundContainer {
+  background-color: #000;
+  opacity: 80%;
+  z-index: -10;
+  position: fixed;
+  top: 0px;
+  width: 100%;
+  height: 100%;
+}
+/* End of Background Container */
+
+/* Hidden Trailer */
+
+.trailerContainer {
+  opacity: 0;
+  position: fixed;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  visibility: hidden;
+  top: 50%;
+  left: 50%;
+  width: 100%;
+  height: 100%;
+  transform: translate(-50%,-50%);
+  z-index: 100;
+}
+
+.trailerContainer.visibility {
+  visibility: visible;
+  opacity: 1;
+}
+
+.trailerContainer video {
+  max-width: 1000px;
+  outline: none;
+}
+
+.closeVideo {
+  position: absolute;
+  top: 30px;
+  right: 30px;
+  cursor: pointer;
+  filter: invert(1);
+  max-width: 32px;
+}
+
+/* End of Hidden Trailer */
+
+/* Selected Game Container */
+
+.selectedGameContainer {
+  opacity: 0;
+  position: fixed;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  visibility: hidden;
+  top: 50%;
+  left: 50%;
+  width: 60%;
+  height: 80%;
+  transform: translate(-50%,-50%);
+  z-index: 100;
+
+  display: flex;
+	flex-wrap: wrap;
+}
+
+.selectedGameContainer.visibility {
+  visibility: visible;
+  opacity: 1;
+}
+
+.btn {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  left: 50%;
+  top: 70%;
+  transform: translateX(-50%);
+  text-decoration: none;
+  color: #fff;
+  border: #fff solid 0.2rem;
+  font-size: 10px;
+  font-weight: bold;
+  width: 100px;
+  padding: 10px;
+  height: 50px;
+  transition: 0.25s;
+}
+
+.btn:hover {
+  background-color: #fff;
+  color: #000;
+}
+
+.selectContainer {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  background: url("../images/previewBG.png");
+  color: #fbfbf8;
+}
+
+.split {
+  position: absolute;
+  width: 50%;
+  height: 100%;
+  overflow: hidden;
+}
+
+.split.left {
+  left: 0;
+}
+
+.split.right {
+  padding-left: 50px;
+  padding-top: 80px;
+  right: 0;
+  box-shadow: 0.2rem 0.2rem 0.5rem #000;
+}
+
+.closeSelectedContainer {
+  position: absolute;
+  top: 30px;
+  right: 30px;
+  cursor: pointer;
+  filter: invert(1);
+  max-width: 32px;
+}
+
+.selectName {
+  margin-bottom: 30px;
+}
+
+.selectPrice {
+  font-size: 20px;
+  margin-bottom: 20px;
+}
+
+.purchaseQuantity label {
+  font-size: 20px;
+  padding-right: 10px;
+}
+
+.inputStyle {
+  width: 30px;
+  height: 25px;
+  border-radius: 0.1;
+  background-color: #E2E2E2;
+}
+
+.purchaseQuantity button {
+  margin-top: 50px;
+  color: #fff;
+  cursor: pointer;
+  outline: none;
+  border: none;
+  border-radius: 1px;
+  background-color: #990F02;
+  height: 25px;
+  width: 50px;
+  transition: 0.5s;
+}
+
+.purchaseQuantity button:hover {
+  background-color: #E3242B;
+}
+
+/* End of Selected Game Container */
+
+
+/* Checkout Container */
+
+.cartContainerBackground {
+  opacity: 0;
+  position: fixed;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  visibility: hidden;
+  top: 50%;
+  left: 50%;
+  width: 80%;
+  height: 80%;
+  transform: translate(-50%,-50%);
+  z-index: 100;
+  display: flex;
+	flex-wrap: wrap;
+}
+
+.cartContainerBackground.visibility {
+  visibility: visible;
+  opacity: 1;
+}
+
+.cartContainer {
+  background: #000;
+  width: 100%;
+  height: 100%;
+  color: #E2E2E2;
+}
+
+.leftSplit {
+  position: absolute;
+  height: 100%;
+  overflow: hidden;
+  left: 0;
+  width: 45%;
+  background: url("../images/leftCartImage.png");
+  object-fit: contain;
+  background-size: cover;
+  background-position: center center;
+}
+
+.rightSplit {
+  position: absolute;
+  height: 100%;
+  overflow: hidden;
+  right: 0;
+  width: 55%;
+  padding-top: 10px;
+  padding-left: 20px;
+}
+
+/* Cart List Container */
+
+.rightSplit h2 {
+  padding-bottom: 10px;
+  margin-left: 180px;
+}
+
+.cartList {
+  position: absolute;
+  width: 80%;
+  background-color: #111111;
+  height: 400px;
+  overflow: scroll;
+}
+
+.cartDivTag {
+  display: flex;
+  flex-direction: row;
+}
+
+.cartItemImg {
+  width: 100px;
+}
+
+.cartItemHeading {
+  position: absolute;
+  margin-top: 25px;
+  right: 50px;
+}
+
+.removeItem {
+  position: absolute;
+  margin-top: 5px;
+  color: #fff;
+  cursor: pointer;
+  outline: none;
+  border: none;
+  background-color: #000;
+  padding: 5px;
+  width: 80px;
+}
+
+.removeItem:hover {
+  background-color: #E3242B;
+  transition: all 0.5s;
+  width: 90px;
+}
+
+
+
+.checkoutSelect {
+  height: 150px;
+  background-color: #070808;
+  position: absolute;
+  height: 20%;
+  width: 80%;
+  margin-top: 385px;
+  padding-left: 20px;
+  padding-top: 10px;
+}
+
+.checkoutSelect select {
+  width: 340px;
+  height: 20px;
+  background-color: #23395d;
+  color: #fff;
+}
+
+.checkoutSelect form {
+  padding-bottom: 10px;
+}
+
+.checkoutTotal {
+  padding-bottom: 5px;
+  font-size: 20px;
+}
+
+.buttonGroup {
+  padding-top: 15px;
+  display: flex;
+  flex-direction: row;
+}
+
+.resetCart {
+  color: #fff;
+  cursor: pointer;
+  outline: none;
+  border: none;
+  background-color: #990F02;
+  padding: 5px;
+}
+
+.resetCart:hover {
+  background-color: #E3242B;
+  transition: all 0.5s;
+}
+
+.buyNow {
+  color: #fff;
+  cursor: pointer;
+  outline: none;
+  border: none;
+  background-color: #23395d;
+  padding: 5px;
+  margin-left: 130px;
+  width: 100px;
+}
+
+.buyNow:hover {
+  color: #000;
+  background-color: #e6e6e6;
+  transition: all 0.5s;
+  width: 110px;
+}
+
+
+/* End of Cart List Container */
+
+/* End of Checkout Container */

@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+
+  <!-- font-awesome link images -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css" />
+
+  <meta charset="utf-8">
+  <title>Shirts & Pants Ltd.</title>
+  <link rel="icon" type="image/png" href="images/favicon.jpg.png">
+  <link rel="stylesheet" href="styles.css">
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Vollkorn:400,400i,600,700,900&display=swap" rel="stylesheet" />
+
+</head>
+
+<body>
+
+  <div class="container">
+    <div class="page-1">
+      <!-- Background Video -->
+      <div class="video-container">
+        <video class="bg-video" autoplay loop muted>
+          <source src="images/video-bg.mp4" type="video/mp4">
+        </video>
+      </div>
+      <!-- End of Background Video -->
+
+      <!-- Navbar -->
+
+      <!-- End of Navbar -->
+
+      <!-- Menu -->
+      <div class="menu">
+        <div class="line line-1"></div>
+        <div class="line line-2"></div>
+        <div class="line line-3"></div>
+      </div>
+      <!-- End of Menu -->
+
+      <!-- Header -->
+      <header class="header center">
+
+        <img class="logo" src="images/logo.png" alt="Logo">
+        <div class="header-text">
+          <h1 class="heading">Shirt & Pants Ltd.</h1>
+          <p class="header-paragraph">Formal Wear</p>
+        </div>
+
+      </header>
+    </div>
+
+    <!-- End of Header -->
+
+    <!-- About Us -->
+    <section class="about-us-container">
+
+      <div class="section-header">
+        <h1 class="section-heading">&nbspAbout Us&nbsp</h1>
+        <div class="underline"></div>
+      </div>
+
+      <div class="about-us">
+
+        <div class="info">
+          <div class="info-header">
+            <h3>&nbspHistory</h3>
+          </div>
+          <p class="info-text">
+            &nbspFounded in 2021 by Rayden Wang in Australia.
+          </p>
+        </div>
+
+        <div class="info">
+          <div class="info-header">
+            <h3>&nbspWho Are We?</h3>
+          </div>
+          <p class="info-text">
+            &nbspTrusted shirt and pants store<br>&nbspfor suitwear.
+          </p>
+        </div>
+
+        <div class="info">
+          <div class="info-header">
+            <h3>&nbspQuality</h3>
+          </div>
+          <p class="info-text">
+            &nbspShirts and Pants go under &nbspinspection before they are shipped, &nbspensuring perfect condition.
+          </p>
+        </div>
+
+        <div class="info">
+          <div class="info-header">
+            <h3>&nbspReviews</h3>
+          </div>
+          <p class="info-text">
+            &nbsp"These are perfect! Absolutely the &nbsptype of formal wear I was looking &nbspfor to wear to my wedding!" &nbspJonathon Charles
+          </p>
+        </div>
+
+        <div class="about-us-img-wrapper">
+          <img src="images/person.png" />
+        </div>
+
+      </div>
+    </section>
+    <!-- End of About Us -->
+
+    <!-- Reviews -->
+    <section class="reviews" id="customers">
+      <h1 class="reviews-heading">Customers</h1>
+      <div class="customers-wrapper">
+        <div class="customer">
+          <p class="customer-text">Absolutely magnificent material!</p>
+          <div class="customer-rating">
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star-half-alt"></i>
+          </div>
+          <img src="images/chris-evans.jpg" class="customer-img">
+          <h4 class="customer-name">Chris Evans</h4>
+        </div>
+        <div class="customer">
+          <p class="customer-text">Awesome!</p>
+          <div class="customer-rating">
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+          </div>
+          <img src="images/chris-hemsworth.jpg" class="customer-img">
+          <h4 class="customer-name">Chris Hemsworth</h4>
+        </div>
+        <div class="customer">
+          <p class="customer-text">Just what I was looking for!</p>
+          <div class="customer-rating">
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="far fa-star"></i>
+          </div>
+          <img src="images/tom-holland.jpg" class="customer-img">
+          <h4 class="customer-name">Tom Holland</h4>
+        </div>
+      </div>
+    </section>
+    <!-- End of Reviews -->
+
+    <!-- Products -->
+
+    <section class="products">
+
+      <h1 class="products-heading">Products</h1>
+
+      <div class="cards-wrapper">
+
+        <div class="card">
+          <div class="front-side">
+            <img src="images/card-product-1.jpg" alt="Shirt" class="card-image" id="shirt-card" />
+            <h1 class="product-name">Shirt</h1>
+            <button class="navigation-button">
+              price &gt;&gt;
+            </button>
+          </div>
+          <div class="back-side center">
+            <button class="navigation-button">
+              &lt;&lt; back
+            </button>
+            <h3 class="product-title">Shirts</h3>
+
+            <div id="make">
+              <form name="shirtType">
+
+                <input type="radio" name="shirt" onclick="setOptionsShirts();" onchange="getOptions(this.value);"><label>&nbspShirt 1 &nbsp($45)</label><br><br> <!-- all same name so only 1 select -->
+                <input type="radio" name="shirt" onclick="setOptionsShirts();" onchange="getOptions(this.value);"><label>&nbspShirt 2 &nbsp($50)</label><br><br>
+                <input type="radio" name="shirt" onclick="setOptionsShirts();" onchange="getOptions(this.value);"><label>&nbspShirt 3 &nbsp($55)</label><br><br>
+
+              </form>
+            </div>
+
+            <br>
+
+            <div class="purchase-info">
+              <input id="dropdown-shirts" type="number" min="0" max="10" value="1" onchange="setOptionsShirts();">
+
+              <button type="button" onclick="resetShirts();">Reset</button><br><br>
+            </div>
+
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="front-side">
+            <img src="images/card-product-2.jpg" alt="Pants" class="card-image" id="pants-card" />
+            <h1 class="product-name">Pants</h1>
+            <button class="navigation-button">
+              price &gt;&gt;
+            </button>
+          </div>
+          <div class="back-side center">
+            <button class="navigation-button">
+              &lt;&lt; back
+            </button>
+            <h3 class="product-title">Pants</h3>
+
+            <div id="make">
+              <form name="pantsType">
+
+                <input type="radio" name="pants" onclick="setOptionsPants();" onchange="getOptions(this.value);"><label>&nbspPants 1 &nbsp($80)</label><br><br>
+                <input type="radio" name="pants" onclick="setOptionsPants();" onchange="getOptions(this.value);"><label>&nbspPants 2 &nbsp($90)</label><br><br>
+                <input type="radio" name="pants" onclick="setOptionsPants();" onchange="getOptions(this.value);"><label>&nbspPants 3 &nbsp($100)</label><br><br>
+
+
+              </form>
+            </div>
+
+            <br>
+
+            <div class="purchase-info">
+              <input id="dropdown-pants" type="number" min="0" max="10" value="1" onchange="setOptionsPants();">
+
+              <button type="button" onclick="resetPants();" class="reset">Reset</button><br><br>
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+
+      <div class="checkout-container">
+        <h3 class="checkout-heading">Checkout <i class="fas fa-shopping-cart"></i></h1>
+          <table class="checkout-table">
+            <tr>
+              <td>&nbspShirts Cost</td>
+              <td class="checkout-text" id="shirt-cost"></td>
+            </tr>
+            <tr>
+              <td>&nbspPants Cost</td>
+              <td class="checkout-text" id="pants-cost"></td>
+            </tr>
+            <tr>
+              <td>&nbspShipping</td>
+              <td class="checkout-text">
+                <form name="shipping">
+                  <select name="shippingSelect" onchange="run(this.selectedIndex);">
+                    <option value="standard">Standard ($10)</option>
+                    <option value="3-day">3-day ($30)</option>
+                    <option value="overnight">Overnight ($60)</option>
+                  </select>
+                </form>
+              </td>
+            </tr>
+            <tr>
+              <td>&nbspAdmin Fee</td>
+              <td class="checkout-text">$40</td>
+            </tr>
+            <tr>
+              <td>&nbspTotal</td>
+              <td class="checkout-text" id="total-cost"></td>
+            </tr>
+          </table>
+
+          <button class="buy-now">Buy Now <i class="fas fa-shopping-cart"></i></button>
+          <button type="button" onclick="reset();" class="btn reset">Reset</button><br>
+
+      </div>
+
+    </section>
+
+    <!-- End of Products -->
+
+    <!-- Footer -->
+
+    <footer class="footer-container">
+      <div class="footer">
+        <p class="contact-us">Shirt & Pants Ltd.</p>
+        <div class="social-media">
+          <a href="https://www.facebook.com" target="_blank"><i class="fab fa-facebook-f"></i></a>
+          <a href="https://www.instagram.com" target="_blank"><i class="fab fa-instagram"></i></a>
+          <a href="https://twitter.com" target="_blank"><i class="fab fa-twitter"></i></a>
+        </div>
+      </div>
+    </footer>
+
+    <!-- End of Footer -->
+
+    <!-- Scroll Up Button -->
+
+    <a href="#" class="scroll-btn">
+      <i class="fas fa-arrow-up"></i>
+    </a>
+
+    <!-- End of Scroll Up Button -->
+
+  </div>
+
+  <script type="text/javascript" src="script.js"></script>
+</body>
+
+</html>
